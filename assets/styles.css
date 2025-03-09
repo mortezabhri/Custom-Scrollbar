@@ -1,0 +1,57 @@
+.scroll-container {
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+    /* غیرفعال کردن اسکرول پیش‌فرض */
+    position: relative;
+    border: 1px solid #ddd;
+    padding-right: 15px;
+}
+
+/* بخش داخلی که اسکرول می‌شود */
+.content {
+    height: 100%;
+    overflow-y: scroll;
+    /* فعال‌سازی اسکرول داخلی */
+    padding-right: 15px;
+    /* تنظیم فضای سمت راست برای اسکرول سفارشی */
+
+    scrollbar-width: none;
+}
+
+/* مخفی کردن اسکرول پیش‌فرض */
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+/* نوار اسکرول سفارشی */
+.custom-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 4px;
+    height: 100%;
+    background: #dddddd69;
+    border-radius: 3px;
+}
+
+/* طراحی دسته اسکرول */
+.thumb {
+    width: 100%;
+    height: 20%;
+    background: #c513e4bf;
+    border-radius: 3px;
+    position: relative;
+    cursor: grab;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100vw;*/
+    max-width: 1500px;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
