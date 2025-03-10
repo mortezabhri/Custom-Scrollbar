@@ -6,13 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const content = document.querySelector(".content");
     const thumb = document.querySelector(".thumb");
     const scrollbar = document.querySelector(".custom-scrollbar");
+ //change it , if scroll-height increase (for design)
+            const value = 0 ;
 
-    // محاسبه نسبت بین اسکرول و دسته اسکرول سفارشی
-    function updateThumbPosition() {
-        let scrollRatio = content.scrollTop / (content.scrollHeight - content.clientHeight);
-        let thumbTop = scrollRatio * (container.clientHeight - thumb.clientHeight);
-        thumb.style.top = thumbTop + "px";
-    }
+            // محاسبه نسبت بین اسکرول و دسته اسکرول سفارشی
+            function updateThumbPosition() {
+                let scrollRatio = content.scrollTop / (content.scrollHeight - content.clientHeight );
+                let thumbTop = scrollRatio * ((container.clientHeight - value) - thumb.clientHeight);
+                thumb.style.top = thumbTop + "px";
+            }
 
     // حرکت دسته اسکرول با اسکرول محتوا
     content.addEventListener("scroll", updateThumbPosition);
